@@ -18,6 +18,7 @@ run: clean glow
 release: glow
 	go build \
 	   -ldflags "-X main.Version=${VERSION} -X main.CommitSHA=${COMMIT}"
+	strip glow
 
 log:
 	tail -f ~/.cache/glow/glow.log
